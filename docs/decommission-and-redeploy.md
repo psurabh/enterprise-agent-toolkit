@@ -12,7 +12,7 @@
 
 What the decommission does:
 - Runs Kubespray's `reset.yml` to remove all Kubernetes components from the node
-- Removes all Helm releases and namespaces (`genai-gateway`, `coding-agent`, `redis`, `observability`, etc.)
+- Removes all Helm releases and namespaces (`genai-gateway`, `redis`, `observability`, etc.)
 - Cleans up container images injected into containerd
 - Removes the generated `hosts.yaml` inventory
 
@@ -30,7 +30,7 @@ After decommission completes, set the components you want back to `on` in `agent
 #   deploy_observability=on
 #   deploy_llm_models=on
 #   deploy_redis=on
-#   deploy_coding_agent=on   # if you want the Coding Agent
+#   deploy_pgvector=on
 
 ./deploy-agentic-stack.sh
 ```
