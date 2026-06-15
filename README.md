@@ -29,7 +29,7 @@ Deploys a full Kubernetes-based stack with GenAI Gateway (LiteLLM + Langfuse), o
 
 The Enterprise Agent Toolkit is a production-ready, Kubernetes-based platform that turns a single Linux server into a fully operational AI agent infrastructure. It bundles every layer an enterprise needs to build, run, and govern AI agents — from secure API routing and intelligent model dispatch, to sandboxed code execution, persistent agent memory, and real-time observability.
 
-Built on Intel® Xeon® Scalable processors the stack is optimized for CPU-efficient inference out of the box and is designed to grow: models on external GPU clusters can be added to the same gateway at any time.
+Built on Intel® Xeon® Scalable processors, the stack is optimized for CPU-efficient inference out of the box and is designed to grow: models on external GPU clusters can be added to the same gateway at any time.
 
 
 ```bash
