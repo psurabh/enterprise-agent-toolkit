@@ -16,7 +16,6 @@ Deploys a full Kubernetes-based stack with GenAI Gateway (LiteLLM + Langfuse), o
 - [Prerequisites](docs/prerequisites.md)
 - [Quick Start](docs/quick-start.md)
 - [Decommission / Reset and Redeploy](docs/decommission-and-redeploy.md)
-- [Project Structure](#project-structure)
 - [License](#license)
 
 ---
