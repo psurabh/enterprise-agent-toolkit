@@ -1,0 +1,14 @@
+# Copyright (C) 2025-2026 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+apiVersion: v2
+name: redis
+description: Standalone Redis (Bitnami/Redis OSS) shared memory backend for agentic workloads
+type: application
+version: 0.2.0
+appVersion: "8.0.1"
+keywords:
+  - redis
+  - memory
+# No external chart dependencies — Redis is deployed as a self-contained StatefulSet.
+# Image: docker.io/bitnami/redis:8.0.1 (BSD-3-Clause engine, Apache-2.0 Bitnami packaging)
+# License: Apache-2.0 (chart) / BSD-3-Clause (Redis engine) — fully OSI-approved.

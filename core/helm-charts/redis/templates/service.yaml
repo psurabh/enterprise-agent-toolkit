@@ -1,0 +1,24 @@
+# Copyright (C) 2025-2026 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+apiVersion: v1
+kind: Service
+metadata:
+  # Name intentionally kept as `redis-stack-server` to preserve backward
+  # compatibility with all existing consumer configurations.
+  # In-cluster URL: redis://redis-stack-server.redis.svc.cluster.local:6379
+  name: redis-stack-server
+  namespace: {{ .Release.Namespace }}
+  labels:
+    app.kubernetes.io/name: redis-stack-server
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: redis-stack-server
+    app.kubernetes.io/instance: {{ .Release.Name }}
+  ports:
+    - name: redis
+      port: 6379
+      targetPort: redis
+      protocol: TCP

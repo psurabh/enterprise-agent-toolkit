@@ -1,0 +1,18 @@
+# Copyright (C) 2025-2026 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+apiVersion: v2
+name: pgvector
+description: >
+  Standalone PostgreSQL 16 with the pgvector extension pre-installed.
+  Shared vector-store and long-term memory backend for agentic workloads.
+  After deployment the in-cluster connection string is:
+    postgresql://agentuser:<password>@pgvector.pgvector.svc.cluster.local:5432/agentdb
+type: application
+version: 0.1.0
+appVersion: "16"
+keywords:
+  - postgresql
+  - pgvector
+  - vector-store
+  - rag
+  - long-term-memory

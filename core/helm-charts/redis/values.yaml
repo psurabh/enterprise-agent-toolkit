@@ -1,0 +1,45 @@
+# Copyright (C) 2025-2026 Intel Corporation
+# SPDX-License-Identifier: Apache-2.0
+
+# ---------------------------------------------------------------------------
+# Standalone Redis — shared memory backend for agentic workloads
+#
+# Image: registry-1.docker.io/bitnamilegacy/redis:latest (BSD-3-Clause / Apache-2.0)
+# No RSALv2 / SSPLv1 modules — fully OSI-approved open-source stack.
+#
+# Deployed into the `redis` namespace as a single-instance StatefulSet.
+# After deployment the in-cluster URL is:
+#
+#   redis://redis-stack-server.redis.svc.cluster.local:6379
+#
+# The Service is intentionally named `redis-stack-server` to preserve
+# backward compatibility with all existing consumer configurations.
+#
+# To point any agent at this shared instance:
+#
+#   --set redisUrl="redis://redis-stack-server.redis.svc.cluster.local:6379"
+# ---------------------------------------------------------------------------
+
+image:
+  repository: registry-1.docker.io/bitnamilegacy/redis
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+# Run without a password (suitable for in-cluster use behind network policies).
+# Set auth.password to a non-empty string to enable AUTH.
+auth:
+  enabled: false
+  password: ""
+
+persistence:
+  # Must match an existing StorageClass; this cluster uses local-path (Kubespray default).
+  storageClass: local-path
+  size: 4Gi
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: "1"
+    memory: 1Gi
