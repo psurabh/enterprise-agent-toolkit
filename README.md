@@ -86,7 +86,7 @@ The [Security Policy](SECURITY.md) outlines our guidelines and procedures for en
 
 ## Trademark Information
 
-Intel, the Intel logo, OpenVINO, the OpenVINO logo, Pentium, Xeon, and Gaudi are trademarks of Intel Corporation or its subsidiaries.
+Intel, the Intel logo, Xeon are trademarks of Intel Corporation or its subsidiaries.
 
 Other names and brands may be claimed as the property of others.
 
