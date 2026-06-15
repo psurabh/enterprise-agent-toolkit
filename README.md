@@ -57,7 +57,7 @@ Enables safe agent actions through sandboxed code execution, tool isolation, tok
 Provides scalable short- and long-term agent memory using vector databases and relational stores to maintain context across tasks, sessions, and workflows. **Redis** (with RediSearch) is deployed as the default memory backend, giving agents persistent session state, semantic search over past interactions, and cross-request continuity.
 
 ### Intel Tools & MCP
-Accelerates agent actions via Intel-optimized tools, **Model Context Protocol (MCP)** integrations, classic AI/ML pipelines and ingestion/ETL services. MCP server templates are included for extending the agent with domain-specific tooling without modifying the core stack.
+Accelerates agent actions via Intel-optimized tools, **Model Context Protocol (MCP)** integrations, classic AI/ML pipelines, and ingestion/ETL services. MCP server templates are included for extending the agent with domain-specific tooling without modifying the core stack.
 
 ### Orchestration
 Orchestrates all agent workloads with **Kubernetes** (via Kubespray), **Helm**, and an Ansible-based automation layer. The stack supports distributed execution, rolling updates, high-availability scaling, and multi-node expansion out of the box. See the [Single-Node Deployment Guide](docs/single-node-deployment.md) [Multi-Node Deployment Guide](docs/multi-node-deployment.md) for step-by-step instructions on deploying across multiple servers.
