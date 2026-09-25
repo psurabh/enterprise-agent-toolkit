@@ -2,7 +2,7 @@
 # Copyright (C) 2025-2026 Intel Corporation
 # SPDX-License-Identifier: Apache-2.0
 # =============================================================================
-# AGENTIC AI STACK — UNIFIED DEPLOYMENT SCRIPT
+# AGENTIC AI STACK — UNIFIED DEPLOYMENT SCCRIPT
 # Deploys: Kubernetes · NGINX Ingress · LiteLLM (GenAI Gateway) · Redis ·
 #          Langfuse (Observability) · Prometheus/Grafana · vLLM CPU ·
 #          Qwen2.5-Coder-14B-Instruct (default)
